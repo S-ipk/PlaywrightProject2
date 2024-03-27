@@ -10,7 +10,8 @@ This project is Playwright framework built with TypeScript, utilizing Playwright
   - [Prerequisites](#prerequisites)
   - [Execution in Local](#execution-in-local)
 - [GitHub Actions](#github-actions)
-- [Contributing](#contributing)
+- [Other Test Scenarios](#other-test-scenarios)
+- [Future Improvements](#future-improvements)
 
 ## Features
 - Utilisation of test data from a JSON file for data-driven testing
