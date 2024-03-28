@@ -11,6 +11,7 @@ export class HomePage {
     readonly productDescription: Locator;
     readonly addToCartButton: Locator;
     readonly cartPage: Locator;
+    
 
 
 
@@ -26,22 +27,21 @@ export class HomePage {
         this.addToCartButton = page.getByRole('link', { name: 'Add to cart' });
         this.cartPage = page.getByRole('link', { name: 'Cart', exact: true });
 
+
     }
 
     async verifyRowContent(page: Page, rowSelector: string, expectedContent: string[]) {
-        // Locate the row element
+        
         const rowElement = await page.$(rowSelector);
 
-        // If rowElement is null, log an error and return early
+        
         if (!rowElement) {
             console.error(`Row element with selector '${rowSelector}' not found`);
             return;
         }
 
-        // Extract the text content of all elements within the row
         const rowText = await rowElement.textContent();
 
-        // Verify that the row content meets the expected criteria
         for (const content of expectedContent) {
             expect(rowText).toContain(content);
         }

@@ -11,7 +11,7 @@ test.describe('UI Tests', () => {
         loginPage = new LoginPage(page);
         await loginPage.navigate(); 
         await loginPage.loginToApplication('username', 'password');
-        //How about cookies? Check this later 
+        
     });
 
     test('User should be able to add a prodoct to cart', async ({ page }) => {
