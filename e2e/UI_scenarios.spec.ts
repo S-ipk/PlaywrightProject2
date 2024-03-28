@@ -34,9 +34,5 @@ test.describe('UI Tests', () => {
         await homePage.verifyRowContent(page, 'tbody#tbodyid tr', ['Samsung galaxy s6', '360']);
 
 
-
-
-
-
     });
 });

@@ -1,5 +1,7 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { ENVIRONMENT } from '../env';
+
+
+
 
 export class LoginPage {
     
@@ -23,15 +25,15 @@ export class LoginPage {
     }
 
     async navigate() {
-        await this.page.goto(ENVIRONMENT.DEMOBLAZE_URL);
+        await this.page.goto(process.env.DEMOBLAZE_URL as string);
     }
 
     async loginToApplication(username: string, password: string) {
         await this.loginText.click();
-        await this.usernameTextbox.fill(ENVIRONMENT.USERNAME);
-        await this.passwordTextbox.fill(ENVIRONMENT.PASSWORD);
+        await this.usernameTextbox.fill(process.env.USERNAME as string);
+        await this.passwordTextbox.fill(process.env.PASSWORD as string);
         await this.loginButton.click();
-        await expect(this.nameOfUser).toHaveText("Welcome " + ENVIRONMENT.USERNAME);
+        await expect(this.nameOfUser).toHaveText("Welcome " + process.env.USERNAME);
     }
 
    

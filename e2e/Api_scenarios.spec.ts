@@ -1,5 +1,4 @@
 import { test, expect } from "@playwright/test";
-import { ENVIRONMENT } from '../env';
 import { languagesInvalidQuery, languagesQuery } from '../testData/graphqlQueries'; 
 
 
@@ -9,7 +8,7 @@ test.describe("Graphql API tests", () => {
        
         // Getting the ULR from env file , getting the query from testData file 
         const response = await request.post(
-            ENVIRONMENT.GRAPHGL_URL,
+            process.env.GRAPHGL_URL as string,
             { data: { query:  languagesQuery } }
         );
 
@@ -42,7 +41,7 @@ test.describe("Graphql API tests", () => {
        
         // Getting the ULR from env file , getting the query from testData file 
         const response = await request.post(
-            ENVIRONMENT.GRAPHGL_URL,
+            process.env.GRAPHGL_URL as string,
             { data: { query:  languagesInvalidQuery } }
         );
 
