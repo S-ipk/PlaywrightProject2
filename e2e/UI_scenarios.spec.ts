@@ -14,7 +14,7 @@ test.describe('UI Tests', () => {
         
     });
 
-    test('User should be able to add a prodoct to cart', async ({ page }) => {
+    test('User should be able to add a product to cart', async ({ page }) => {
         homePage = new HomePage(page);
         await homePage.samsungGalaxyS6Text.click();
         await homePage.samsungGalaxyS6Heading.isVisible();

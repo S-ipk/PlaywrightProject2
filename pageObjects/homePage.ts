@@ -13,9 +13,6 @@ export class HomePage {
     readonly cartPage: Locator;
     
 
-
-
-
     constructor(page: Page) {
         this.page = page;
         this.samsungGalaxyS6Text = page.getByRole('link', { name: 'Samsung galaxy s6' });
